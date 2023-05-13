@@ -18,6 +18,11 @@ let itemId;
 // parsing array to local Storage
 const arrayOfItems = JSON.parse(localStorage.getItem('data')) ?? []
 
+// reset function
+function reset () {
+    urlLink.value = '';
+    selectType.value = '';
+}
 
 // function to display data even after refresing the page, retreiving data from local-storage
 arrayOfItems.map( objectData => displayDetails(objectData));
@@ -78,7 +83,8 @@ function getItemURL(e) {
 
     // calling the dispaly function for displaying items into screen
     displayDetails(itemObject);
-    
+
+    reset();   
 }
 
 
@@ -152,6 +158,7 @@ function filterMobileItem() {
         if (val.type == 'mobile') {
             displayDetails(val);
         }
+        else dispalyErrorMessage('No Data Available');
 
     })
 }
@@ -163,7 +170,9 @@ function filterLaptopItem() {
     arrayOfItems.filter(val => {
         if(val.type == 'laptop')
         displayDetails(val);
+        else dispalyErrorMessage('No Data Available');
     })
+    
 }
 
 // function to filter laptop item
@@ -171,8 +180,8 @@ function filterTabItem() {
     displayBox.innerHTML = '';
 
     arrayOfItems.filter(val => {
-        if(val.type == 'tabs')
-        displayDetails(val);
+        if(val.type == 'tabs') displayDetails(val);
+        else dispalyErrorMessage('No Data Available');
     })
 }
 
@@ -181,8 +190,8 @@ function filterHeadphoneItem() {
     displayBox.innerHTML = '';
 
     arrayOfItems.filter(val => {
-        if(val.type == 'headphone')
-        displayDetails(val);
+        if(val.type == 'headphone') displayDetails(val);
+        else dispalyErrorMessage('No Data Available');
     })
 }
 
@@ -191,8 +200,8 @@ function filterCameraItem() {
     displayBox.innerHTML = '';
 
     arrayOfItems.filter(val => {
-        if(val.type == 'cam')
-        displayDetails(val);
+        if(val.type == 'cam') displayDetails(val);
+        else dispalyErrorMessage('No Data Available');
     })
 }
 
@@ -201,8 +210,8 @@ function filterPrinterItem() {
     displayBox.innerHTML = '';
 
     arrayOfItems.filter(val => {
-        if(val.type == 'print')
-        displayDetails(val);
+        if(val.type == 'print') displayDetails(val);
+        else dispalyErrorMessage('No Data Available');
     })
 }
 
@@ -211,8 +220,8 @@ function filterSpeakerItem() {
     displayBox.innerHTML = '';
 
     arrayOfItems.filter(val => {
-        if(val.type == 'speaker')
-        displayDetails(val);
+        if(val.type == 'speaker') displayDetails(val);
+        else dispalyErrorMessage('No Data Available');
     })
 }
 
@@ -222,8 +231,8 @@ function filterPlayStationItem() {
     console.log('play.........')
 
     arrayOfItems.filter(val => {
-        if(val.type == 'play-station')
-        displayDetails(val);
+        if(val.type == 'play-station') displayDetails(val);
+        else dispalyErrorMessage('No Data Available');
     })
 }
 
