@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+
+  <body>
+    <!-- this header includes heading & form inputs -->
+    <header id="header">
+      <form>
+        <h2 id="logo">Tech Gallery</h2>
+        <span id="url-link-box">
+          <span id="product-addition">Add Your Products</span>
+          <label for="image-url"></label>
+          <input
+            type="url"
+            name="image-url"
+            id="url-link"
+            placeholder="Paste the product image url link here ...."
+          />
+        </span>
+
+        <span id="gadget-filter-box">
+          <label for="type-of-gadget">Select Type</label>
+          <select name="type-of-gadget" id="select-gadget-type">
+            <option value="">Select Gadget</option>
+            <option value="mobile">Mobiles</option>
+            <option value="laptop">Laptops</option>
+            <option value="tabs">Tabs</option>
+            <option value="headphone">Headphones</option>
+            <option value="cam">Camera</option>
+            <option value="print">Printers</option>
+            <option value="speaker">Speakers</option>
+            <option value="play-station">PlayStation</option>
+            <button type="submit">Add</button>
+          </select>
+        </span>
+        <button type="submit" id="add-btn">Add</button>
+      </form>
+    </header>
+
+    <!-- this section is for gadget filtering -->
+    <section id="filter-type-box">
+      <span class="filter-item" id="all">
+        <img src="images/all.jpg" alt="" />
+        <button type="submit">All</button>
+      </span>
+      <span class="filter-item" id="mobile">
+        <img src="images/mobile2.webp" alt="" />
+        <button type="submit">Mobiles</button>
+      </span>
+      <span class="filter-item" id="laptop">
+        <img src="images/laptop.webp" alt="" />
+        <button type="submit">Laptops</button>
+      </span>
+      <span class="filter-item" id="tab">
+        <img src="images/tabs.webp" alt="" />
+        <button type="submit">Tabs</button>
+      </span>
+      <span class="filter-item" id="headphone">
+        <img src="images/headphones.webp" alt="" />
+        <button type="submit">Headphones</button>
+      </span>
+      <span class="filter-item" id="camera">
+        <img src="images/cam.webp" alt="" />
+        <button type="submit">Camera</button>
+      </span>
+      <span class="filter-item" id="printer">
+        <img src="images/printer.webp" alt="" />
+        <button type="submit">Printers</button>
+      </span>
+      <span class="filter-item" id="speaker">
+        <img src="images/speaker.webp" alt="" />
+        <button type="submit">Speakers</button>
+      </span>
+      <span class="filter-item" id="play-station">
+        <img src="images/playstation.webp" alt="" />
+        <button type="submit">PlayStation</button>
+      </span>
+    </section>
+
+
+    <div class="error-msg"></div>
+
+
+    <!-- for dynamically rendering the items into screen -->
+    <section id="display-box">
+      
+    </section>
+
+
+  </body>
+</html>
+
